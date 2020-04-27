@@ -1,31 +1,16 @@
 #ifndef ARETE_H
 #define ARETE_H
-
+#include <Sommet.h>
 
 class Arete
 {
 public:
     Arete();
     virtual ~Arete();
-    Sommet*Arete::GetSommet1()
-    {
-        return m_sommet1
-    }
-
-    Sommets*Arete::GetSommet2()
-    {
-        return m_sommet2;
-    }
-
-    int Arete::GetNum()
-    {
-        return m_num;
-    }
-
-    double Arete::GetPoids()
-    {
-        return m_poids;
-    }
+    Sommet* GetSommet1();
+    Sommet* GetSommet2();
+    int GetNum();
+    double GetPoids();
 
 protected:
 
