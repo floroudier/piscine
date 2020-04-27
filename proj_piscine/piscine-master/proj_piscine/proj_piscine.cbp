@@ -34,6 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../../../../../svgfile.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../svgfile.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Implementation.cpp" />
 		<Unit filename="Implementation.h" />
 		<Unit filename="include/Arete.h" />
@@ -43,7 +49,6 @@
 		<Unit filename="src/Arete.cpp" />
 		<Unit filename="src/Graphe.cpp" />
 		<Unit filename="src/Sommet.cpp" />
-		<Unit filename="svgfile.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
