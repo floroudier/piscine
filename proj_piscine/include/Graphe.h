@@ -3,12 +3,14 @@
 #include <Sommet.h>
 #include <vector>
 #include <Arete.h>
+#include <string>
 
 class Graphe
 {
 public:
     Graphe(std::string fichier);
     Graphe(std::string fichier, std::string fichierPonderation);
+    void afficher();
 
 
 protected:

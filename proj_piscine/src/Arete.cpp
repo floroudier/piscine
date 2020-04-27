@@ -1,16 +1,16 @@
 #include "Arete.h"
 
-Arete::Arete()
+Arete::Arete(int i)
 {
-    //ctor
+    m_num=i;
 }
 
-Sommet*Arete::GetSommet1()
+int Arete::GetSommet1()
     {
         return m_sommet1;
     }
 
-Sommet*Arete::GetSommet2()
+int Arete::GetSommet2()
     {
         return m_sommet2;
     }
@@ -25,6 +25,21 @@ double Arete::GetPoids()
         return m_poids;
     }
 
+
+void Arete::SetSommet1(int sommet1) //Type a changer si besoin de plus d'informations sur le sommet
+{
+    m_sommet1=sommet1;
+}
+
+void Arete::SetSommet2(int sommet2)
+{
+    m_sommet2=sommet2;
+}
+
+void Arete::SetNum(int numero)
+{
+    m_num=numero;
+}
 Arete::~Arete()
 {
     //dtor

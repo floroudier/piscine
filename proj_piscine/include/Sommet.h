@@ -8,15 +8,18 @@
 class Sommet
 {
 public:
-    Sommet();
+    Sommet(int i);
     virtual ~Sommet();
     void SetName(std::string name);
     void SetX(int x);
     void SetY(int y);
-    std::string GetName();
-    int GetX();
-    int GetY();
-    int GetIndice();
+    void SetIndice(int indice);
+    std::string getName();
+    int getX();
+    int getY();
+    int getIndice();
+
+
 
 
 

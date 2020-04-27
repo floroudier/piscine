@@ -9,8 +9,10 @@ int main()
 
     nomFichier=choixFichier();
 
-    std::cout<<nomFichier;
 
     Graphe exemple(nomFichier);
+
+    exemple.afficher();
+
     return 0;
 }
