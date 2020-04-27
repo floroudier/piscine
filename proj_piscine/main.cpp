@@ -1,10 +1,16 @@
 #include <iostream>
-
-
+#include "Implementation.h"
+#include "Graphe.h"
 
 
 int main()
 {
-    std::cout << "Hello world!" << std::endl;
+    std::string nomFichier;
+
+    nomFichier=choixFichier();
+
+    std::cout<<nomFichier;
+
+    Graphe exemple(nomFichier);
     return 0;
 }

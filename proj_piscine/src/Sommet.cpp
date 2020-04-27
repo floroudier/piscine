@@ -5,6 +5,11 @@ Sommet::Sommet()
     //ctor
 }
 
+int Sommet::GetIndice()
+{
+    return m_indice;
+}
+
 std::string Sommet::GetName()
     {
         return m_name;

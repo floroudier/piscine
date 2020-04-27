@@ -16,12 +16,14 @@ public:
     std::string GetName();
     int GetX();
     int GetY();
+    int GetIndice();
 
 
 
 protected:
 
 private:
+    int m_indice;
     std::string m_name;
     int m_x;
     int m_y;

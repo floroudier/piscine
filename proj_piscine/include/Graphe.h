@@ -8,12 +8,13 @@ class Graphe
 {
 public:
     Graphe(std::string fichier);
-    ~Graphe();
+    Graphe(std::string fichier, std::string fichierPonderation);
+
 
 protected:
 
 private:
-    bool m_orientation;
+    int m_orientation;
     int m_ordre;
     int m_taille;
     std::vector <Sommet*> m_sommets;
