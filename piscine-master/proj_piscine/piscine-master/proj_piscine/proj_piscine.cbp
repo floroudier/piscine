@@ -34,6 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../../../../../svgfile.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="../../svgfile.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="Implementation.cpp" />
+		<Unit filename="Implementation.h" />
 		<Unit filename="include/Arete.h" />
 		<Unit filename="include/Graphe.h" />
 		<Unit filename="include/Sommet.h" />
