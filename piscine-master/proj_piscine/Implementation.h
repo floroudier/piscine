@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "Graphe.h"
+#include "Svgfile.h"
 
 
 std::string choixFichier ();

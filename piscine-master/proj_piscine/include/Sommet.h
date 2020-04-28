@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "Svgfile.h"
 
 
 
@@ -20,12 +21,8 @@ public:
     int getX();
     int getY();
     int getIndice();
+    void afficherSVG(Svgfile *svgout);
 
-
-
-
-
-protected:
 
 private:
     int m_indice;

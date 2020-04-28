@@ -2,7 +2,7 @@
 #include <string>
 
 
-std::string choixFichier ()
+std::string choixFichier () // Sous P qui permet d'entrer nom fichier
 {
     std::string fichier;
     std::cout<<"Entrez nom du fichier de topologie"<<std::endl;
@@ -10,7 +10,7 @@ std::string choixFichier ()
     return fichier;
 }
 
-std::string choixFichierPond()
+std::string choixFichierPond() // Sous P qui permet d'entrer noms fichiers
 {
     std::string fichierPondere;
     std::cout<<std::endl<<"Entrez nom du fichier de ponderations"<<std::endl;
@@ -19,12 +19,14 @@ std::string choixFichierPond()
 }
 
 
+
 void menu ()
 {
     int choixPondere;
+    Svgfile svgout;
     std::cout<<"Votre arbre est-il pondere?"<<std::endl;
-    //Svgfile svgout;
-    //svgout.addGrid();
+
+
     do
     {
         std::cout<<"0 : Oui"<<std::endl<<"1 : Non"<<std::endl;
@@ -38,6 +40,8 @@ void menu ()
         nomFichier=choixFichier();
 
         Graphe objet (nomFichier);
+
+        objet.afficherGraphSVG(&svgout);
 
         objet.afficher();
 
@@ -53,7 +57,10 @@ void menu ()
         nomFichierPonderation=choixFichierPond();
 
 
-        Graphe objetPondere (nomFichier,nomFichierPonderation);
+
+       Graphe objetPondere (nomFichier,nomFichierPonderation);
+
+       objetPondere.afficherGraphSVG(&svgout);
 
         objetPondere.afficherPondere();
 

@@ -1,16 +1,16 @@
 #include "Arete.h"
 
-Arete::Arete(int i)
+Arete::Arete(int i) // Constructeur
 {
     m_num=i;
 }
 
-int Arete::GetSommet1()
+Sommet* Arete::GetSommet1() // Accesseurs
     {
         return m_sommet1;
     }
 
-int Arete::GetSommet2()
+Sommet* Arete::GetSommet2()
     {
         return m_sommet2;
     }
@@ -26,14 +26,16 @@ double Arete::GetPoids()
     }
 
 
-void Arete::SetSommet1(int sommet1) //Type a changer si besoin de plus d'informations sur le sommet
+void Arete::SetSommet1(Sommet* nouveau) // Setteurs afin de modifier les valeurs des attributs
+//Type a changer si besoin de plus d'informations sur le sommet
 {
-    m_sommet1=sommet1;
+
+    m_sommet1=nouveau;
 }
 
-void Arete::SetSommet2(int sommet2)
+void Arete::SetSommet2(Sommet* nouveau)
 {
-    m_sommet2=sommet2;
+    m_sommet2=nouveau;
 }
 
 void Arete::SetNum(int numero)
@@ -44,6 +46,44 @@ void Arete::SetNum(int numero)
 void Arete::SetPoids(double poids)
 {
     m_poids=poids;
+}
+
+int Arete::GetIndice1()
+{
+    return m_sommet1->getIndice();
+}
+
+int Arete::GetIndice2()
+{
+    return m_sommet2->getIndice();
+}
+
+int Arete::GetXSommet1()
+{
+    return m_sommet1->getX();
+}
+
+int Arete::GetYSommet1()
+{
+    return m_sommet1->getY();
+}
+
+int Arete::GetXSommet2()
+{
+    return m_sommet2->getX();
+}
+
+int Arete::GetYSommet2()
+{
+    return m_sommet2->getY();
+
+}
+
+
+void Arete::afficherSVGarete(Svgfile *svgout)
+{
+    svgout->addLine(GetXSommet1()*100,GetYSommet1()*100,GetXSommet2()*100,GetYSommet2()*100);
+
 }
 Arete::~Arete()
 {

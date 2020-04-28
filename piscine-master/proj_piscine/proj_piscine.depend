@@ -60,47 +60,58 @@
 	"Implementation.h"
 	<string>
 
-1588015988 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\implementation.cpp
+1588077673 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\implementation.cpp
 	"Implementation.h"
 	<string>
 
-1588014328 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\implementation.h
+1588026945 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\implementation.h
 	<iostream>
 	<string>
 	"Graphe.h"
+	"Svgfile.h"
 
-1588009461 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\main.cpp
+1588074619 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\main.cpp
 	<iostream>
 	"Implementation.h"
 	"Graphe.h"
 
-1588015979 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\include\graphe.h
+1588074620 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\include\graphe.h
 	<Sommet.h>
 	<vector>
 	<Arete.h>
 	<string>
+	"Svgfile.h"
 
-1588015901 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\include\sommet.h
+1588071216 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\include\sommet.h
 	<iostream>
 	<string>
 	<fstream>
+	"Svgfile.h"
 
-1588009439 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\include\arete.h
+1588079295 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\include\arete.h
 	<Sommet.h>
 
-1588009433 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\src\arete.cpp
+1588079737 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\src\arete.cpp
 	"Arete.h"
 
-1588014451 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\src\graphe.cpp
+1588077552 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\src\graphe.cpp
 	"Graphe.h"
 
-1588006649 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\src\sommet.cpp
+1588074619 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\src\sommet.cpp
 	"Sommet.h"
 
-1588006648 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\svgfile.cpp
-	"svgfile.h"
+1588023041 source:c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\svgfile.cpp
+	"Svgfile.h"
 	<iostream>
 	<sstream>
 
-1588015979 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\svgfile.h
+1588028569 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\svgfile.h
+	<string>
+	<fstream>
+	<set>
+
+1588022791 c:\users\alexandre bontemps\documents\github\piscine\piscine-master\proj_piscine\include\svgfile.h
+	<string>
+	<fstream>
+	<set>
 

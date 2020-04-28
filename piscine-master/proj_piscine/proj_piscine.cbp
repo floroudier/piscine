@@ -36,6 +36,8 @@
 		</Compiler>
 		<Unit filename="Implementation.cpp" />
 		<Unit filename="Implementation.h" />
+		<Unit filename="Svgfile.cpp" />
+		<Unit filename="Svgfile.h" />
 		<Unit filename="include/Arete.h" />
 		<Unit filename="include/Graphe.h" />
 		<Unit filename="include/Sommet.h" />
@@ -43,7 +45,6 @@
 		<Unit filename="src/Arete.cpp" />
 		<Unit filename="src/Graphe.cpp" />
 		<Unit filename="src/Sommet.cpp" />
-		<Unit filename="svgfile.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

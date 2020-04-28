@@ -4,16 +4,17 @@
 #include <vector>
 #include <Arete.h>
 #include <string>
-
+#include "Svgfile.h"
 
 
 class Graphe
 {
 public:
-    Graphe(std::string fichier);
-    Graphe(std::string fichier, std::string fichierPonderation);
+    Graphe(std::string fichier); //Constructeur
+    Graphe(std::string fichier, std::string fichierPonderation); //Constructeur surchargé afin de charger pondération
     void afficher();
     void afficherPondere();
+    void afficherGraphSVG(Svgfile*svgout);
 
 
 protected:
