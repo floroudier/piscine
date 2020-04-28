@@ -1,5 +1,7 @@
 #ifndef SOMMET_H
 #define SOMMET_H
+#include <iostream>
+#include "fstream"
 
 
 class Sommet
@@ -10,21 +12,10 @@ public:
     void SetName(std::string name);
     void SetX(int x);
     void SetY(int y);
+    std::string GetName();
+    int GetX();
+    int GetY();
 
-    std::string Sommet::GetName()
-    {
-        return m_name;
-    }
-
-    int Sommet:GetX()
-    {
-        return m_x;
-    }
-
-    int Sommet:GetY()
-    {
-        return m_y;
-    }
 protected:
 
 private:

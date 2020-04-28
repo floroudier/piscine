@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1587984947 source:c:\users\floro\onedrive\documents\github\piscine\proj_piscine\src\sommet.cpp
+	"Sommet.h"
+
+1587986308 c:\users\floro\onedrive\documents\github\piscine\proj_piscine\include\sommet.h
+	<iostream>
+	"fstream"
+
+1587985270 source:c:\users\floro\onedrive\documents\github\piscine\proj_piscine\main.cpp
+	<iostream>
+
+1587985284 source:c:\users\floro\onedrive\documents\github\piscine\proj_piscine\src\arete.cpp
+	"Arete.h"
+
+1587985087 c:\users\floro\onedrive\documents\github\piscine\proj_piscine\include\arete.h
+	<Sommet.h>
+
+1587986308 source:c:\users\floro\onedrive\documents\github\piscine\proj_piscine\src\graphe.cpp
+	"Graphe.h"
+
+1587986506 c:\users\floro\onedrive\documents\github\piscine\proj_piscine\include\graphe.h
+	"vector"
+	<Sommet.h>
+	<arete.h>
+

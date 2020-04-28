@@ -1,11 +1,18 @@
 #include "Sommet.h"
 
-Sommet::Sommet()
-{
-    //ctor
-}
 
-Sommet::~Sommet()
-{
-    //dtor
-}
+
+std::string Sommet::GetName()
+    {
+        return m_name;
+    }
+
+int Sommet::GetX()
+    {
+        return m_x;
+    }
+
+int Sommet::GetY()
+    {
+        return m_y;
+    }
