@@ -79,7 +79,6 @@ int Arete::GetYSommet2()
 
 }
 
-
 void Arete::afficherSVGarete(Svgfile *svgout)
 {
     svgout->addLine(GetXSommet1()*100,GetYSommet1()*100,GetXSommet2()*100,GetYSommet2()*100);

@@ -31,7 +31,7 @@ Graphe::Graphe(std::string fichier)
         throw std::runtime_error("Probleme lecture taille du graphe");
 
     for (int t=0; t<m_taille; ++t)
-    m_arete.push_back( new Arete{t} );
+        m_arete.push_back( new Arete{t} );
     int numeroArete;
     int sommet1;
     int sommet2;
@@ -40,7 +40,7 @@ Graphe::Graphe(std::string fichier)
         ifs>>numeroArete;
         m_arete[k]->SetNum(numeroArete);
         ifs>>sommet1>>sommet2;
-        for(unsigned int i=0;i<m_sommets.size();++i)
+        for(unsigned int i=0; i<m_sommets.size(); ++i)
         {
             if(m_sommets[i]->GetIndice()==sommet1)
             {
@@ -96,7 +96,7 @@ Graphe::Graphe(std::string fichier,std::string fichierPonderation)// Chargement 
         throw std::runtime_error("Probleme lecture taille du graphe");
 
     for (int t=0; t<m_taille; ++t)
-    m_arete.push_back( new Arete{t} );
+        m_arete.push_back( new Arete{t} );
     int numeroArete;
     int sommet1;
     int sommet2;
@@ -105,7 +105,7 @@ Graphe::Graphe(std::string fichier,std::string fichierPonderation)// Chargement 
         ifs>>numeroArete;
         m_arete[k]->SetNum(numeroArete);
         ifs>>sommet1>>sommet2;
-        for(unsigned int i=0;i<m_sommets.size();++i)
+        for(unsigned int i=0; i<m_sommets.size(); ++i)
         {
             if(m_sommets[i]->GetIndice()==sommet1)
             {
@@ -121,11 +121,11 @@ Graphe::Graphe(std::string fichier,std::string fichierPonderation)// Chargement 
 
         if ( ifs.fail() )
             throw std::runtime_error("Probleme lecture arc");
-       /* m_sommets[num1]->ajouterSucc(m_sommets[num2]);
-        //si le graphe n'est pas orienté
-        //si num2 est successeur de num1, num1 est successeur de num2
-        if(!m_orientation)
-            m_sommets[num2]->ajouterSucc(m_sommets[num1]);*/
+        /* m_sommets[num1]->ajouterSucc(m_sommets[num2]);
+         //si le graphe n'est pas orienté
+         //si num2 est successeur de num1, num1 est successeur de num2
+         if(!m_orientation)
+             m_sommets[num2]->ajouterSucc(m_sommets[num1]);*/
 
     }
 
@@ -133,11 +133,11 @@ Graphe::Graphe(std::string fichier,std::string fichierPonderation)// Chargement 
         throw std::runtime_error( "Impossible d'ouvrir en lecture le deuxieme fichier " + fichierPonderation );
     ifs2>>m_taille;
     int poids;
-    for(int z=0;z<m_taille;++z)
+    for(int z=0; z<m_taille; ++z)
     {
         ifs2>>poids;
         m_arete[z]->SetPoids(poids);
-            if ( ifs2.fail() )
+        if ( ifs2.fail() )
             throw std::runtime_error("Probleme lecture poids");
     }
 
@@ -149,7 +149,7 @@ void Graphe::afficher() // Affichage en console du fichier de topologie
 
     std::cout<<"Orientation : "<<m_orientation<<std::endl;
     std::cout<<"Ordre : "<<m_ordre<<std::endl;
-    for(int i=0;i<m_ordre;++i)
+    for(int i=0; i<m_ordre; ++i)
     {
         std::cout<<m_sommets[i]->GetIndice()<<" ";
         std::cout<<m_sommets[i]->GetName()<<" ";
@@ -157,7 +157,7 @@ void Graphe::afficher() // Affichage en console du fichier de topologie
         std::cout<<m_sommets[i]->GetY()<<std::endl;
     }
     std::cout<<"Taille : "<<m_taille<<std::endl;
-    for(int j=0;j<m_taille;++j)
+    for(int j=0; j<m_taille; ++j)
     {
         std::cout<<m_arete[j]->GetNum()<<" ";
         std::cout<<m_arete[j]->GetIndice1()<<" ";
@@ -172,7 +172,7 @@ void Graphe::afficherPondere()// Affichage en console des fichiers de topologie 
 
     std::cout<<"Orientation : "<<m_orientation<<std::endl;
     std::cout<<"Ordre : "<<m_ordre<<std::endl;
-    for(int i=0;i<m_ordre;++i)
+    for(int i=0; i<m_ordre; ++i)
     {
         std::cout<<m_sommets[i]->GetIndice()<<" ";
         std::cout<<m_sommets[i]->GetName()<<" ";
@@ -180,7 +180,7 @@ void Graphe::afficherPondere()// Affichage en console des fichiers de topologie 
         std::cout<<m_sommets[i]->GetY()<<std::endl;
     }
     std::cout<<"Taille : "<<m_taille<<std::endl;
-    for(int j=0;j<m_taille;++j)
+    for(int j=0; j<m_taille; ++j)
     {
         std::cout<<m_arete[j]->GetNum()<<" ";
         std::cout<<m_arete[j]->GetIndice1()<<" ";
@@ -195,11 +195,11 @@ void Graphe::afficherPondere()// Affichage en console des fichiers de topologie 
 
 void Graphe::afficherGraphSVG(Svgfile*svgout)// Affichage des sommets en SVG
 {
-    for(unsigned int i=0;i<m_sommets.size();i++)
+    for(unsigned int i=0; i<m_sommets.size(); i++)
     {
         m_sommets[i]->afficherSVG(svgout);
     }
-    for(unsigned int i=0;i<m_arete.size();i++)
+    for(unsigned int i=0; i<m_arete.size(); i++)
     {
         m_arete[i]->afficherSVGarete(svgout);
     }
@@ -235,16 +235,16 @@ void Graphe::centralVecProp()       /** Fonction de centralité de vecteur propre
     int c[i];                                                     /** Remise à zero du C **/
     int csi[i];
     int cvp[i];
-    int ctot;
+    int ctot=0;
     double lambda=0;
     double lambdaTemp=0;                                                    /** valeur temporaire pour comparer lambda avec celui de la boucle précédente **/
-        for(i=0; i<m_ordre; i++)                                            /** Parcourir les sommets **/
-            m_sommets[i]->SetCvp(m_sommets[i]->GetCentralDegre());            /** initialisation du CVP avec le nombre de degré de chaque sommet **/
+    for(i=0; i<m_ordre; i++)                                            /** Parcourir les sommets **/
+        m_sommets[i]->SetCvp(m_sommets[i]->GetCentralDegre());            /** initialisation du CVP avec le nombre de degré de chaque sommet **/
     do                                                                      /** boucle tant que lambda varie trop**/
     {
         for(i=0; i<m_ordre; i++)                                             /** Parcourir les sommets **/
         {
-                                                             /** somme totale des C **/
+            /** somme totale des C **/
             for(j=0; j<m_taille; j++)                                        /** Parcourir les aretes **/
             {
                 if(m_arete[j]->GetSommet1()==m_sommets[i])                        /** Si l'arete part du sommet étudié **/
@@ -252,24 +252,84 @@ void Graphe::centralVecProp()       /** Fonction de centralité de vecteur propre
                     c[i]=c[i]+m_arete[j]->GetSommet2()->GetCvp();             /** Ajouter le cvp du descendant au C du prédecesseur **/
                 }
             }
-            for(i=0; i<m_ordre; i++)                                        /** Boucle de clacul du Ctot **/
+            for(int k=0; k<m_ordre; k++)                                        /** Boucle de calcul du Ctot **/
             {
-                csi[i]=c[i]*c[i];
-                ctot=ctot+csi[i];
+                csi[k]=c[k]*c[k];
+                ctot=ctot+csi[k];
             }
             lambdaTemp=lambda;
             lambda= sqrt(ctot);                                                 /** Calcul du lambda **/
-                for(i=0; i<m_ordre; i++)                                    /** Boucle de calcul du Cvp de chaque sommet **/
+            for(int x=0; x<m_ordre; x++)                                    /** Boucle de calcul du Cvp de chaque sommet **/
             {
-                cvp[i]=csi[i]/lambda;
+                cvp[x]=csi[x]/lambda;
             }
         }
     }
-   /* while (lambda/lambdaTemp<=1,5); */                                    /** Tant que lambda varie trop **/
-   while (lambda-lambdaTemp>=0.1);
-   for(i=0; i<m_ordre; i++)
-   {
-       m_sommets[i]->SetCvp(cvp[i]);
-   }
+    /* while (lambda/lambdaTemp<=1,5); */                                    /** Tant que lambda varie trop **/
+    while (lambda-lambdaTemp>=0.1);
+    for(i=0; i<m_ordre; i++)
+    {
+        m_sommets[i]->SetCvp(cvp[i]);
+    }
 }
+
+
+
+
+void Graphe::Dijkstra()
+{
+    double distanceMin;
+    int i=0;
+    int j=0;
+    double poidsmin=0;
+    for(i=0; i<m_ordre; i++)
+    {
+        for(j=0; j<m_ordre; j++)
+        {
+            int sommetVisite=i;
+            int sommetActuel=i;
+            for(int k=0; k<m_ordre; k++)
+            {
+                distanceMin=990;
+                m_sommets[k]->SetVisiteDijkstra(0);
+            }
+            do
+            {
+                for(int x=0; x<m_taille; x++)
+                {
+                    if (m_arete[x]->GetIndice1()==sommetVisite && m_arete[x]->GetSommet2()->GetVisiteDijkstra()==0)
+                    {
+                        if (m_arete[x]->GetPoids()<poidsmin)
+                        {
+                            poidsmin=m_arete[x]->GetPoids();
+                            sommetActuel=m_arete[x]->GetIndice2();
+                        }
+                    }
+                }
+                distanceMin=distanceMin+poidsmin;
+                sommetVisite=sommetActuel;
+            }
+            while (sommetVisite!=m_sommets[j]->GetIndice());
+            m_sommets[j]->SetDistanceDijkstra(distanceMin, j);              /**Si  probleme attention initialisation du vector**/
+
+        }
+    }
+}
+
+void Graphe::centralProx()
+{
+    for(int i=0; i<m_ordre; i++)
+    {
+        m_sommets[i]->SetCentralProxInv(0);
+        for (int j=0; j<m_ordre-1; j++)
+        {
+            m_sommets[i]->SetCentralProxInv(j);
+            ///*m_sommets[i]->SetCentralProx(m_sommets[i]->GetCentralProx()+m_sommets[i]->GetDistanceDijkstra[j]())*/
+        }
+        m_sommets[i]->SetCentralProx(m_ordre, m_sommets[i]->GetCentralProxInv());
+    }
+}
+
+
+
 

@@ -17,6 +17,8 @@ public:
     void afficherGraphSVG(Svgfile*svgout);
     void centralDegre();
     void centralVecProp();
+    void Dijkstra();
+    void centralProx();
 
 
 protected:
@@ -27,6 +29,9 @@ private:
     int m_taille;
     std::vector <Sommet*> m_sommets;
     std::vector <Arete*> m_arete;
+    Sommet* sommetDepart;
+    Sommet* sommetArrivee;
+    Sommet* sommetVisite;
 };
 
 #endif // GRAPHE_H
